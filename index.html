@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Soham Lokhande | Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Soham Lokhande</title>
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<!-- NAV -->
+<div class="bg-glow"></div>
+
 <header class="nav">
-  <div class="logo">Soham.</div>
+  <div class="logo">Soham</div>
   <nav>
     <a href="#about">About</a>
+    <a href="#skills">Skills</a>
     <a href="#projects">Projects</a>
     <a href="#contact">Contact</a>
   </nav>
@@ -20,13 +23,29 @@
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-text">
+  <div class="hero-left">
     <h1>Soham Lokhande</h1>
-    <h2>ENTC Engineering Student | Aspiring Developer</h2>
-    <p>I like building things that actually work — from circuits to simple web apps.</p>
+    <h2>ENTC Student • Aspiring Developer</h2>
+    <p>
+      I enjoy building things — sometimes they work, sometimes they don’t.
+      Either way, I learn something every time.
+    </p>
+
     <div class="cta">
-      <a href="#projects" class="btn primary">View Projects</a>
-      <a href="#contact" class="btn secondary">Contact Me</a>
+      <a href="#projects" class="btn primary">Explore Work</a>
+      <a href="#contact" class="btn ghost">Let’s Connect</a>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <div class="code-box">
+      <pre>
+while(learning){
+  build();
+  fail();
+  improve();
+}
+      </pre>
     </div>
   </div>
 </section>
@@ -34,36 +53,53 @@
 <!-- ABOUT -->
 <section id="about" class="section">
   <h3>About Me</h3>
-  <p>
-    I'm a first-year ENTC student at MIT Academy of Engineering, Alandi.
-    Right now, I’m exploring both electronics and development — trying to figure out
-    how hardware and software actually come together in real projects.
-  </p>
-  <p>
-    I enjoy working on Arduino-based ideas and also building small web projects.
-    Still learning, still experimenting — but that’s the fun part.
-  </p>
+
+  <div class="about-grid">
+    <p>
+      I'm currently in my first year of ENTC at MIT AOE, Alandi.
+      Still early in the journey, but I like exploring how things actually work —
+      both in software and electronics.
+    </p>
+
+    <p>
+      I’ve started with Arduino projects and basic web development.
+      Nothing huge yet, but I enjoy the process of building and figuring things out.
+    </p>
+
+    <p>
+      My goal right now is simple — get better every day and build things that
+      actually solve small real-world problems.
+    </p>
+  </div>
 </section>
 
 <!-- SKILLS -->
-<section class="section skills">
+<section id="skills" class="section">
   <h3>Skills</h3>
 
-  <div class="skill-grid">
-    <div class="card">
-      <h4>Programming</h4>
-      <p>C, C++</p>
+  <div class="skill-bars">
+
+    <div class="skill">
+      <span>C / C++</span>
+      <div class="bar"><div style="width:70%"></div></div>
     </div>
 
-    <div class="card">
-      <h4>Web</h4>
-      <p>HTML, CSS</p>
+    <div class="skill">
+      <span>HTML / CSS</span>
+      <div class="bar"><div style="width:75%"></div></div>
     </div>
 
-    <div class="card">
-      <h4>Electronics</h4>
-      <p>Arduino Uno, Microcontroller Projects</p>
+    <div class="skill">
+      <span>Arduino</span>
+      <div class="bar"><div style="width:65%"></div></div>
     </div>
+
+  </div>
+
+  <div class="tags">
+    <span>Microcontrollers</span>
+    <span>Sensors</span>
+    <span>Embedded Logic</span>
   </div>
 </section>
 
@@ -71,53 +107,67 @@
 <section id="projects" class="section">
   <h3>Projects</h3>
 
-  <div class="project">
-    <h4>Automatic Obstacle Avoiding Robot</h4>
-    <p>
-      Built a robot using ultrasonic sensors that detects obstacles and changes direction.
-      It was my first proper hardware project — lots of trial and error but learned a lot.
-    </p>
-    <span>Arduino Uno • Sensors • Embedded Logic</span>
-  </div>
+  <div class="project-grid">
 
-  <div class="project">
-    <h4>Arduino Based Mini Projects</h4>
-    <p>
-      Worked on small experiments using Arduino — LEDs, sensors, and simple automation ideas.
-      Still exploring different possibilities.
-    </p>
-    <span>Arduino • Basic Electronics</span>
-  </div>
+    <div class="project-card">
+      <div class="overlay"></div>
+      <h4>Obstacle Avoiding Robot</h4>
+      <p>
+        A robot that detects obstacles using ultrasonic sensors and navigates automatically.
+        Learned a lot about real-world debugging here.
+      </p>
+      <span>Arduino • Sensors • Logic</span>
+    </div>
 
+    <div class="project-card">
+      <div class="overlay"></div>
+      <h4>Arduino Mini Experiments</h4>
+      <p>
+        Series of small experiments with LEDs, sensors, and circuits.
+        Helped me understand basics of electronics.
+      </p>
+      <span>Arduino • Circuits</span>
+    </div>
+
+  </div>
 </section>
 
 <!-- LEARNING -->
-<section class="section">
+<section class="section learning">
   <h3>Learning Journey</h3>
-  <p>
-    As a first-year student, I'm still figuring things out. I like trying different areas —
-    from coding to circuits — and seeing what clicks.
-  </p>
-  <p>
-    Right now, my focus is simple: learn consistently, build small projects, and improve step by step.
-  </p>
+
+  <div class="timeline">
+    <div>
+      <h4>Started Engineering</h4>
+      <p>Got introduced to programming and electronics basics.</p>
+    </div>
+
+    <div>
+      <h4>Arduino Projects</h4>
+      <p>Built my first working hardware projects.</p>
+    </div>
+
+    <div>
+      <h4>Web Development</h4>
+      <p>Started building simple websites like this one.</p>
+    </div>
+  </div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact" class="section contact">
   <h3>Contact</h3>
 
-  <div class="links">
-    <a href="https://www.linkedin.com/in/soham-lokhande-a53383338" target="_blank">LinkedIn</a>
-    <a href="https://share.google/Qir6rnxaVXR34TarB" target="_blank">GitHub</a>
-    <a href="https://www.instagram.com/lokhande_soham5" target="_blank">Instagram</a>
-    <a href="https://wa.me/+918329968545" target="_blank">WhatsApp</a>
+  <div class="socials">
+    <a href="https://www.linkedin.com/in/soham-lokhande-a53383338">LinkedIn</a>
+    <a href="https://share.google/Qir6rnxaVXR34TarB">GitHub</a>
+    <a href="https://www.instagram.com/lokhande_soham5">Instagram</a>
+    <a href="https://wa.me/+918329968545">WhatsApp</a>
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
-  <p>Designed & Developed by Soham Lokhande</p>
+  Designed & Developed by Soham Lokhande
 </footer>
 
 <script src="script.js"></script>
