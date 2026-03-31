@@ -1,12 +1,24 @@
-// scroll animation
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("show");
-    }
-  });
-});
+document.addEventListener("DOMContentLoaded", () => {
+    // Intersection Observer for fade-in animations on scroll
+    const revealElements = document.querySelectorAll('.reveal');
 
-document.querySelectorAll(".section").forEach(sec => {
-  observer.observe(sec);
+    const revealOptions = {
+        threshold: 0.15,
+        rootMargin: "0px 0px -50px 0px"
+    };
+
+    const revealOnScroll = new IntersectionObserver(function(entries, observer) {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) {
+                return;
+            } else {
+                entry.target.classList.add('active');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, revealOptions);
+
+    revealElements.forEach(el => {
+        revealOnScroll.observe(el);
+    });
 });
